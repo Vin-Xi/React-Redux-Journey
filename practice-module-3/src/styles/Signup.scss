@@ -1,0 +1,33 @@
+.form{
+    display:flex;
+    flex-direction: column;
+    border:1px solid black;
+    padding:1rem; 
+    
+}
+
+.input-form{
+    // border:1px solid red;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding:1rem;
+    
+    label{
+        margin:0.1rem
+    }
+    input{
+        margin:0.1rem;
+        padding:0.2rem;
+        
+    }    
+}
+.input-error{
+    color:red;
+    font-size:0.8rem;
+
+}
+.mButton{
+    align-self:center
+    
+}
