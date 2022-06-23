@@ -1,8 +1,7 @@
-import React from 'react';
-import '../styles/App.scss';
-import Signup from './Signup';
-import Signin from './Signin'
-import NavBar from '../components/AppBar';
+import './App.scss';
+import Signup from '../Signup';
+import Signin from '../Signin'
+import NavBar from '../../components/AppBar/AppBar';
 import { Routes,Route } from 'react-router-dom';
 
 const App = () => (

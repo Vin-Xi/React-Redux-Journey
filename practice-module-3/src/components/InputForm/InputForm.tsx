@@ -3,20 +3,18 @@ import {FC,ChangeEventHandler} from 'react';
 import TextField from '@mui/material/TextField';
 
 
-interface iInputProp {
+interface IInputProp {
     name:string,
     placeholder?:string,
     label:string,
     handleChange:ChangeEventHandler,
-    error:string,
-    isError:boolean
+    error?:string,
 }
 
-const InputForm:FC<iInputProp> = ({name,placeholder,handleChange,label,error,isError})=> {
-  
+const InputForm:FC<IInputProp> = ({name,placeholder,handleChange,label,error})=> {
+    console.log(error)
     return(
         <div className='input-form'>
-            {/* <label htmlFor={name}> {label}: </label> */}
             <TextField
                 variant="standard"
                 type={name}
@@ -27,11 +25,10 @@ const InputForm:FC<iInputProp> = ({name,placeholder,handleChange,label,error,isE
                 onChange={handleChange}
                 autoComplete='off'
             />
-            {   isError?
-                 <span className="input-error">
+            <span className="input-error">
                 {error}
-             </span>:null
-            }
+            </span>
+            
         </div>
 )}
 
